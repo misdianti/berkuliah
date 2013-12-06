@@ -211,6 +211,24 @@ class Note extends CActiveRecord
 
 		return $info->save();
 	}
+	
+	/**
+	 * Retrieves the number of unique users that have downloaded this note
+	 * @return int the number of unique users that have downloaded this note
+	 */
+	public function getTotalDownloader()
+	{
+		$cmd = Yii::app()->db->createCommand();
+		$cmd->select('COUNT(distinct student_id) AS downloaderCount');
+		$cmd->distinct=true;
+		$cmd->from('bk_download_info');
+		$cmd->where('note_id=:X', array(':X' => $this->id));
+		
+
+		$res = $cmd->queryRow();
+		return $res['downloaderCount'];
+	}
+
 
 	/**
 	 * Retrieves the total rating of this note

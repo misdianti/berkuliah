@@ -48,6 +48,22 @@
 				<td>:</td>
 				<td><?php echo Yii::app()->format->datetime($model->edit_timestamp); ?></td>
 			</tr>
+<tr>
+				<td><i class="icon icon-user"></i> Total Pengunduh</td>
+				<td>:</td>
+				<td>
+				<?php
+					$totalDownloader = $model->getTotalDownloader();				
+
+					echo '<span id="total_downloader">';
+					if ( ! $totalDownloader)
+						echo '0' . ' Pengguna';
+					else
+						echo $totalDownloader . ' Pengguna';
+					
+				?>
+				</td>
+			</tr>
 			<tr>
 				<td><i class="icon icon-star"></i> Total Rating</td>
 				<td>:</td>

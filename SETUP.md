@@ -9,10 +9,6 @@ Dokumen ini dijelaskan secara singkat dan padat. Baca dari atas sampai bawah. Le
 
 Belum dicoba untuk Mac, tetapi seharusnya bisa. Sesuaikan konfigurasi LAMP dengan environment di Mac.
 
-# Konvensi
-
-`{BERKULIAH}` adalah tempat dimana berkuliah diinstall.
-
 # Environment Setup: Linux (Debian Based)
 
 Jika yakin kebutuhan standar LAMP telah terpenuhi, lewati perintah ini.
@@ -40,37 +36,77 @@ Jika yakin kebutuhan standar LAMP telah terpenuhi, lewati perintah ini.
 
 # Environment Setup: Windows
 
-Lakukan instalasi program berikut:
+Download dan install program berikut:
 
-1. Coral Server Terbaru: [uniformserver.com](http://sourceforge.net/projects/miniserver/files/Uniform%20Server/8.9.2-Coral/Coral_8_9_2.exe/download).  
+1. Coral Server (atau disebut juga Uniform Server) Terbaru: [uniformserver.com](http://sourceforge.net/projects/miniserver/files/Uniform%20Server/8.9.2-Coral/Coral_8_9_2.exe/download).  
    **Catatan:** Anda bisa menggunakkan environment apapun seperti XAMPP, tetapi untuk Windows kami merekomendasikan Uniform.
-
+1. [MSysGit](http://msysgit.github.io/) dengan [KDiff](http://kdiff3.sourceforge.net/)
 1. SourceTree: [sourcetreeapp.com](http://sourcetreeapp.com)
-1. [MSysGit] dan [KDiff]
 1. Untuk fitur Preview, mohon pasang SWFTools (dijelaskan belakangan)
 
-# Initial Configuration Setup
+Catatan khusus untuk instalasi Coral:
 
-1. Clone: `https://[akun_github_anda]@github.com/misdianti/berkuliah.git` (atau gunakan client
-   kesukaan Anda seperti [SourceTree](http://sourcetreeapp.com))
-2. Download yii, taruh di satu folder di atasnya
-3. Bikin database `berkuliah` dan `berkuliah_test` terus jalanin sql di `protected/data`
-4. Selesai!
+1. Pasang Coral. Ketika ditanya instalasi, masukkan folder **yang tidak ada spasinya**. (`C:\` saja cukup). Selanjutnya kita akan sebut folder ini sebagai `{UNISERVER}`.
+1. Masukkan setiap baris dari program ini ke environment variable (tentu saja, ubah `{UNISERVER}` menjadi path absolute sebenarnya:
+		
+		{UNISERVER}\usr\local\php
+		{UNISERVER}\usr\local\mysql\bin
 
-# Initial Setup
+1. Jalankan `{UNISERVER}\Start_as_a_program.exe`
+1. Akan ditanya "Change MySQL Password". Berhubung hanya akan melakukan instalasi lokal, abaikan saja permintaan ini. Pilih `NO` untuk membiarkan password apa adanya, kemudian pilih `YES` untuk mendisable peringatan ini di kemudian hari.
+1. Klik `Start Both`.
 
+# Konfigurasi Inisial
 
+1. `cd` ke `/var/www/` (Linux) atau `{UNISERVER}\www` (Windows)
+1. Clone: `https://[akun_github_anda]@github.com/misdianti/berkuliah.git` (atau gunakan client kesukaan Anda seperti [SourceTree](http://sourcetreeapp.com))  
+   Selanjutnya, folder ini akan kita sebut sebagai `{BERKULIAH}`
+1. Unduh arsip berikut:
+
+		http://yii.googlecode.com/files/yii-1.1.13.e9e4a0.tar.gz
+   
+   Extract ke satu folder di atas berkuliah dan ubah namanya dari `yii-1.1.13.e9e4a0` menjadi `yii`. Sehingga nantinya struktur foldernya akan seperti berikut:
+
+		www/
+		    berkuliah/
+		    yii/
+
+1. `cd` ke `{BERKULIAH}/protected` (Linux) atau `{BERKULIAH}\protected` (Windows)
+1. Lakukan database migration. Ikuti perintah berikut (Ketika diminta password, masukkan password MySQL. Defaultnya adalah `root`):
+
+		mysql -u root -p
+		create database berkuliah;
+		use berkuliah;
+		source data\berkuliah.sql;
+		source data\bk_faculty.sql;
+		source data\bk_course.sql;
+		source data\bk_badge.sql;
+		create database berkuliah_test;
+		use berkuliah_test;
+		source data\berkuliah.sql;
+		source data\bk_faculty.sql;
+		source data\bk_course.sql;
+		source data\bk_badge.sql;
+
+   Catatan: Jika saat memasukkan perintah `mysql` command line tidak memberikan reaksi apapun, pastikan **Anda sudah menambahkan mysql ke PATH. Baca bagian Setup Environment untuk platform Anda**.
+
+1. Dengan editor kesukaan Anda (misalnya [Aptana Studio](http://aptana.com)), buat berkas berikut:
+
+   - `{BERKULIAH}/protected/config/main.php`. Contoh isinya dapat diambil dari `{BERKULIAH}/protected/config/main.example.php`
+   - `{BERKULIAH}/protected/config/local.php`. Contoh isinya dapat diambil dari `{BERKULIAH}/protected/config/local.example.php`  
+
+   Sesuaikan isinya dengan konfigurasi komputer Anda. Mohon dicatat `API KEY` untuk Facebook tidak diberikan, silahkan generate sendiri dari [developer.facebook.com](http://developer.facebook.com).
 
 # Menjalankan Unit Testing
 
-1. Pertama, buat sebuah file baru `protected/config/test.php`. Ambil isiyna dari berkas contoh `protected/config/test.example.php`.
+1. Pertama, buat sebuah file baru `protected/config/test.php`. Ambil isinya dari berkas contoh `protected/config/test.example.php`.
 2. Sesuaikan isi `test.php` dengan konfigurasi komputer lokal   
 2. Buka cmd, `cd` ke folder `{BERKULIAH}\protected\tests`
 3. Masih di cmd, ketik `..\vendor\bin\phpunit unit`
 
 # Instalasi Preview Engine
 
-Engine Preview tersedia oleh FlexPaper. FlexPaper memiliki dependency ke SWFTools. Lakukan instalasi [SWFTools](http://www.swftools.org/download.html) terlebih dahulu. 
+Engine Preview tersedia dengan bantuan FlexPaper. FlexPaper memiliki dependency ke SWFTools. Lakukan instalasi [SWFTools](http://www.swftools.org/download.html) terlebih dahulu. 
 
 - Untuk Windows, cukup unduh [binarynya](http://www.swftools.org/swftools-0.9.0.exe) saja. Kemudian masukkan folder yang mengandung `pdf2swf` ke PATH (ada di folder tempat instalasi)
 - Untuk linux:

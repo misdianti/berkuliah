@@ -88,9 +88,9 @@
 			</tr>
 			<!-- Added part from PMPL 2013: unique downloader count START -->
 			<tr>
-				<td><i class="icon icon-user"></i> Telah diunduh oleh</td>
+				<td><i class="icon-download-alt"></i> Total Pengunduh</td>
 				<td>:</td>
-				<td><span><?php echo $downloadInfoModel->uniqueDownloader($model->id)." pengguna berbeda"; ?></span></td>
+				<td><span><?php echo $downloadInfoModel->uniqueDownloader($model->id)." Pengguna"; ?></span></td>
 			</tr>
 			<!-- Added part from PMPL 2013: unique downloader count  END -->
 			<tr>

@@ -35,7 +35,7 @@ Yii::app()->clientScript->registerScript('carousel',
           <p>
               BerKuliah merupakan sebuah sistem informasi untuk berbagi berkas kuliah. Berkas kuliah yang 
               dimaksud dapat berupa catatan materi kuliah maupun arsip soal ujian, baik dalam format PDF, 
-              gambar, maupun teks. Aplikasi ini diperuntukkan bagi pemilik akun JUITA (Jaringan UI Terpadu). 
+              gambar, maupun teks. Aplikasi ini memerlukan account situs web jejaring sosial Facebook untuk dapat login. 
           </p>
           <p>
               Pada umumnya, jika seorang mahasiswa membutuhkan berkas kuliah mahasiswa lain, maka ia akan 

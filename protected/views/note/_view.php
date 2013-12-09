@@ -88,7 +88,7 @@
 			</tr>
 			<!-- Added part from PMPL 2013: unique downloader count START -->
 			<tr>
-				<td><i class="icon icon-user"></i> Telah diunduh oleh</td>
+				<td><i class="icon-download-alt"></i> Telah diunduh oleh</td>
 				<td>:</td>
 				<td><span><?php echo $downloadInfoModel->uniqueDownloader($model->id)." pengguna berbeda"; ?></span></td>
 			</tr>

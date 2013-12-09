@@ -1,13 +1,13 @@
 # Memulai Melakukan Instalasi
 
-Dokumen ini dijelaskan secara singkat dan padat. Baca dari atas sampai bawah. Lewati bagian yang tidak sesuai (misal, jika menggunakkan Windows, abaikan bagian Linux).
+Dokumen ini menjelaskan langkah-langkah untuk melakukan instalasi. Bacalah dokumen ini dengan seksama karena langkah-langkah dijelaskan secara singkat dan padat. Lewati petunjuk/instruksi yang tidak sesuai dengan spesifikasi sistem Anda (misal, jika menggunakkan Windows, abaikan instruksi bagian Linux).
 
 # Recommended Environment
 
 - Linux: Ubuntu 12.04
-- Windows: Windows XP ke atas
+- Windows: Windows XP atau versi yang lebih baru.
 
-Belum dicoba untuk Mac, tetapi seharusnya bisa. Sesuaikan konfigurasi LAMP dengan environment di Mac.
+Untuk Mac OS belum pernah diuji coba, tetapi seharusnya bisa. Sesuaikan konfigurasi LAMP dengan environment di Mac OS.
 
 # Environment Setup: Linux (Debian Based)
 

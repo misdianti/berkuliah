@@ -28,6 +28,21 @@ Please refer to our [How to Contribute](https://github.com/kemskems/berkuliah/wi
 3. Annisa Prida Rachmadianty [http://github.com/annisaprida](http://github.com/annisaprida)
 4. Mercia [http://github.com/Merciaa](http://github.com/Merciaa)
 
+## Quality Assurance Developer (PMPL-OKE Team)
+
+1. Ahmad Fanani [https://github.com/ahmadahfa](https://github.com/ahmadahfa)
+2. Argianto Rahartomo [https://github.com/SuikoHero38](https://github.com/SuikoHero38)
+3. Anang Ferdi Kusuma [https://github.com/anangferdi](https://github.com/anangferdi)
+4. Ardhian Prabantoro [https://github.com/ardhianbjs](https://github.com/ardhianbjs)
+5. Dimas Agung Saputra [https://github.com/dimasgung](https://github.com/dimasgung)
+6. Erryan Sazany [https://github.com/erisazani](https://github.com/erisazani)
+7. Febriana Misdianti [https://github.com/misdianti](https://github.com/misdianti)
+8. M. Fajar Rizky Abidin [https://github.com/fajarrizky](https://github.com/fajarrizky)
+9. Muhammad Iqbal [https://github.com/iqbalmineraltown](https://github.com/iqbalmineraltown)
+10. Muhammad Mufid Afif [https://github.com/mufid](https://github.com/mufid)
+11. Niken Paramita [https://github.com/nikenparamita](https://github.com/nikenparamita)
+
+
 ## Copyright & License
 
 Copyright 2013 BerKuliah.

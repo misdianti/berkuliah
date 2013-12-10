@@ -41,6 +41,7 @@ class HomeController extends Controller
 	 */
 	public function actionIndex()
 	{
+		// var_dump(Yii::app()->user->id);
 		$model = new Note('search');
 		if (isset($_GET['Note']))
 		{
@@ -51,6 +52,7 @@ class HomeController extends Controller
 		{
 			$dataProvider=new CActiveDataProvider('Note', array(
 				'criteria' => array(
+					'condition' =>  'student_id = '. Yii::app()->user->id .' OR flag_privacy = 0',
 					'order' => 'upload_timestamp DESC',
 				),
 			));

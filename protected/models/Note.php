@@ -84,7 +84,7 @@ class Note extends CActiveRecord
 			array('faculty_id', 'required', 'on'=>'insert', 'message'=>'{attribute} tidak boleh kosong.'),
 			array('faculty_id', 'exist', 'className'=>'Faculty', 'attributeName'=>'id', 'on'=>'insert',
 				'message'=>'{attribute} tidak terdaftar.'),
-			array('flag_privacy', 'required', 'on'=>'insert', 'message'=>'{attribute} tidak boleh kosong.'),
+			array('flag_privacy', 'required', 'on'=>'insert, update', 'message'=>'{attribute} tidak boleh kosong.'),
 			array('file', 'checkNote', 'on'=>'insert'),
 			array('type, student_id, upload_timestamp, edit_timestamp, raw_file_text', 'safe'),
 			

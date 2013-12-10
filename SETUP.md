@@ -100,7 +100,7 @@ Catatan khusus untuk instalasi Coral:
 # Menjalankan Unit Testing
 
 1. Pertama, buat sebuah file baru `protected/config/test.php`. Ambil isinya dari berkas contoh `protected/config/test.example.php`.
-2. Sesuaikan isi `test.php` dengan konfigurasi komputer lokal. Beberapa penyesuaian seperti: username dan password dari hosting Anda dan juga PATH dari folder images dan badges dari sistem BerKuliah di sistem Anda.  
+2. Sesuaikan isi `test.php` dengan konfigurasi komputer lokal. Beberapa penyesuaian seperti: username dan password dari web server Anda dan juga PATH dari folder images dan badges dari sistem BerKuliah di sistem Anda.  
 2. Buka cmd, `cd` ke folder `{BERKULIAH}\protected\tests`
 3. Masih di cmd, ketik `..\vendor\bin\phpunit unit`
 

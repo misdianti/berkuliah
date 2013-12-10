@@ -98,6 +98,15 @@
 			</td>
 		</tr>
 
+		<?php echo 	Yii::app()->format->formatInputField($form, 'radioButtonList', $model, 'flag_privacy', 'icon-lock',
+			array(
+				"1" => "Pribadi",
+				"0" => "Publik"
+			),
+			array(
+			)
+		); ?>
+
 		<tr>
 			<td></td>
 			<td>

@@ -98,8 +98,6 @@ CREATE TABLE IF NOT EXISTS `bk_note` (
   KEY `upload_user_id` (`student_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
-ALTER TABLE `bk_note` ADD `flag_privacy` TINYINT( 1 ) NOT NULL;
-
 -- --------------------------------------------------------
 
 --

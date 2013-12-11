@@ -1,7 +1,6 @@
 <?php
 /* @var $this HomeController */
 /* @var $data Note */
-
 $baseUrl = Yii::app()->request->baseUrl;
 ?>
 
@@ -35,4 +34,4 @@ $baseUrl = Yii::app()->request->baseUrl;
 <?php if (Yii::app()->user->isAdmin): ?>
 	<i class="icon icon-flag"></i> <?php echo CHtml::encode($data->reportCount); ?>
 	<br />
-<?php endif; ?>
+<?php endif;?>

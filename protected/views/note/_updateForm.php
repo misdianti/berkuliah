@@ -23,6 +23,7 @@
 
 	<table class='table table-hover'>
 
+		
 		<?php echo Yii::app()->format->formatInputField($form, 'textField', $model, 'title', 'icon-tag',
 			array(
 				'maxlength' => 128,
@@ -34,7 +35,15 @@
 				'cols' => 50,
 			)
 		); ?>
-
+		<?php echo 	Yii::app()->format->formatInputField($form, 'radioButtonList', $model, 'flag_privacy', 'icon-lock',
+			array(
+				"1" => "Pribadi",
+				"0" => "Publik"
+			),
+			array(
+			)
+		); ?>
+		
 		<tr>
 			<td></td>
 			<td>
@@ -42,6 +51,7 @@
 				<?php echo CHtml::link('Batal', array('view', 'id' => $model->id), array('class' => 'btn')); ?>
 			</td>
 		</tr>
+
 
 		</table>
 	<?php $this->endWidget();?>

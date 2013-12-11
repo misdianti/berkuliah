@@ -1,0 +1,1 @@
+ALTER TABLE `bk_note` ADD `flag_privacy` TINYINT( 1 ) NOT NULL;

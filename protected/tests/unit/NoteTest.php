@@ -101,6 +101,7 @@ class NoteTest extends CDbTestCase
 
 		$note = new Note();
 		$note->setAttributes($this->noteAttributes);
+		$note->flag_privacy = 0;
 
 		$this->assertTrue($note->validate());
 		$note->student_id = $student->id;
@@ -129,6 +130,7 @@ class NoteTest extends CDbTestCase
 		$note->setAttributes($this->noteAttributes);
 		$note->file = null;
 		$note->raw_file_text = $text;
+		$note->flag_privacy = 0;
 
 		$this->assertTrue($note->validate());
 		$note->student_id = $student->id;

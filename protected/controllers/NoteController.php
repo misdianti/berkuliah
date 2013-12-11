@@ -108,7 +108,7 @@ class NoteController extends Controller
 	public function actionUpdate($id)
 	{
 		$model = $this->loadModel($id);
-		
+
 		if (isset($_POST['Note']))
 		{
 			$model->attributes = $_POST['Note'];

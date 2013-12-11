@@ -49,6 +49,17 @@
 				<td><?php echo Yii::app()->format->datetime($model->edit_timestamp); ?></td>
 			</tr>
 			<tr>
+				<td><i class="icon icon-lock"></i> <?php echo CHtml::encode($model->getAttributeLabel('flag_privacy')); ?></td>
+				<td>:</td>
+				<td><?php 
+					if($model->flag_privacy == '1') {
+						echo "Pribadi";
+					} else {
+						echo "Publik";
+					}
+				?></td>
+			</tr>
+			<tr>
 				<td><i class="icon icon-star"></i> Total Rating</td>
 				<td>:</td>
 				<td>

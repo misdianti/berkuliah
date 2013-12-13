@@ -104,11 +104,46 @@ Catatan khusus untuk instalasi Coral:
 2. Buka cmd, `cd` ke folder `{BERKULIAH}\protected\tests`
 3. Masih di cmd, ketik `..\vendor\bin\phpunit unit`
 
+**Catatan:** Pada saat unit testing, Anda mungkin akan menemui masalah "PHP Invoker not found." Hal ini bisa diabaikan. Hal ini bisa terjadi karena tidak ada dukungan PHP Invoker untuk Windows, sedangkan unit testing sendiri tidak membutuhkan PHP Invoker.
+
+# Code Coverage
+
+Code coverage membutuhkan PHP Invoker. Anda dapat dengan mudah memasangnya lewat PEAR jika Anda ada di Linux:
+
+	pear install phpunit/PHP_Invoker
+
+Kemudian jalankan code coverage dengan cara berikut:
+
+1. `cd` ke `{BERKULAH}/protected/tests`
+1. Jalankan:
+
+		..\vendor\bin\phpunit --coverage-html ./report unit
+
+1. Lihat folder `{BERKULIAH}/protected/tests/report` untuk melihat hasil dari code coverage
+
+**Catatan untuk Windows:**
+
+Jika Anda menggunakkan Windows, Anda tidak akan bisa menjalankan code coverage karena PHP_Invoker tidak tersedia untuk platform Windows. Meski demikian, Code Coverage tetap bisa dijalankan di Windows dengan melakukan *mock* terhadap kelas PHP_Invoker:
+
+1. Untuk binary PHP_Invoker di <http://pear.phpunit.de/get/PHP_Invoker-1.1.2.tgz>
+1. Letakkan folder `Invoker` di `{UNISERVER}\home\us_pear\PEAR`
+1. Taruh `Invoker.php` di `{UNISERVER}\home\us_pear\PEAR` dan ubah namanya menjadi `PHP_Invoker.php`
+
+Sehingga hasil akhirnya, struktur folder di `home\us_pear\PEAR` akan seperti berikut:
+
+	PEAR/
+	  ....
+	  Invoker/
+	    Autoload.php
+	    TimeoutException.php
+	  ....
+	  PHP_Invoker.php
+
 # Instalasi Preview Engine
 
-Engine Preview tersedia dengan bantuan FlexPaper. FlexPaper memiliki dependency ke SWFTools. Lakukan instalasi [SWFTools](http://www.swftools.org/download.html) terlebih dahulu. 
+Engine Preview tersedia dengan bantuan FlexPaper. FlexPaper memiliki dependency ke SWFTools. Lakukan instalasi SWFTools (<http://www.swftools.org/download.html>) terlebih dahulu. 
 
-- Untuk Windows, cukup unduh [binarynya](http://www.swftools.org/swftools-0.9.0.exe) saja. Kemudian masukkan folder yang mengandung `pdf2swf` ke PATH (ada di folder tempat instalasi)
+- Untuk Windows, cukup unduh binarynya (<http://www.swftools.org/swftools-0.9.0.exe>) saja. Kemudian masukkan folder yang mengandung `pdf2swf` ke PATH (ada di folder tempat instalasi)
 - Untuk linux:
 
 		# Default Digital Ocean Image prerequisites
@@ -127,7 +162,7 @@ Jika instalasi di Windows ternyata bermasalah, mohon cek `flexpaper/php/config/c
 
 # Github Hook
 
-Untuk automatic deployment ke server, gunakan Github Hook, arahkan ke URL yang mengandung `auto.php`. [Contohnya ini](http://d.pr/i/G6M9).
+Untuk automatic deployment ke server, gunakan Github Hook, arahkan ke URL yang mengandung `auto.php`. Contoh: <http://d.pr/i/G6M9>.
 
 Kemudian, pastikan permission dan ownership sesuai dengan konfigurasi web server. Untuk Apache, pastikan pemiliknya adalah `www-data:www-data`. Jika tidak, lakukan `chown`. Misal:
 

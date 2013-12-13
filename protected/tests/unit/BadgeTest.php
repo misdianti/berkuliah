@@ -1,7 +1,10 @@
 <?php
 
 /**
- * Unit test for Badge model.
+ * Kelas ini melakukan uji coba terhadap fungsi-fungsi yang ada
+ * pada kelas model Badge. Kelas BadgeTest extends terhadap 
+ * kelas CDbTestCase. Kelas ini memeriksa apakah badge yang 
+ * disimpan di database ada dalam direktori proyek.
  */
 class BadgeTest extends CDbTestCase
 {

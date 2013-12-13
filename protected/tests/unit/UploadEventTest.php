@@ -1,7 +1,12 @@
 <?php
 
 /**
- * Unit test for UploadEvent component.
+ * Kelas UploadEventTest melakukan uji coba fungsi - fungsi yang 
+ * ada dalam komponen UploadEvent. Sama seperti kelas 
+ * DownloadEventTest, Kelas UploadEventTest extends CTestCase. 
+ * Kelas UploadEventTest menguji fungsi untuk mengecek apakah 
+ * sistem berhasil menjalankan fungsi yang berjalan setelah 
+ * terjadi upload dengan benar. 
  */
 class UploadEventTest extends CTestCase
 {

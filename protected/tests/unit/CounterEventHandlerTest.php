@@ -1,7 +1,11 @@
 <?php
 
 /**
- * Unit test for CounterEventHandler component.
+ * Kelas CounterEventHandlerTest melakukan uji coba fungsi - fungsi yang ada 
+ * dalam komponen CounterEventHandler. Kelas ini extends CDbTestCase karena 
+ * melibatkan active records. Kelas CounterEventHandlerTest menguji fungsi 
+ * untuk mengecek apakah sistem berhasil melakukan upload dan download 
+ * badge dengan benar. 
  */
 class CounterEventHandlerTest extends CDbTestCase
 {

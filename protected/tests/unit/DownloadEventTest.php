@@ -1,7 +1,11 @@
 <?php
 
 /**
- * Unit test for DownloadEvent component.
+ * Kelas DownloadEventTest melakukan uji coba fungsi - fungsi yang ada dalam 
+ * komponen DownloadEvent. Kelas ini extends CTestCase yang berarti bahwa 
+ * DownloadEventTest melakukan unit testing secara general. Kelas 
+ * DownloadEventTest menguji fungsi untuk mengecek apakah sistem berhasil 
+ * menjalankan fungsi yang berjalan setelah terjadi download dengan benar. 
  */
 class DownloadEventTest extends CTestCase
 {

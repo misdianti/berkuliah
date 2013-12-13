@@ -1,7 +1,15 @@
 <?php
 
 /**
- * Unit test for Note model.
+ * Kelas NoteTest melakukan uji coba fungsi-fungsi pada kelas model Note.
+ * Sama seperti kelas BadgeTest, kelas NoteTest extends terhadap kelas 
+ * CDbTestCase karena kelas model Note melibatkan active records. 
+ * Kelas NoteTest memeriksa apakah note yang dimasukkan memiliki format 
+ * pdf, jpg, atau htm. Selain itu kelas ini juga memeriksa semua fungsi 
+ * yang terkait dengan note, yaitu fungsi untuk upload note, upload note 
+ * dengan raw text, upload note dengan invalid input, update note, update
+ * note dengan invalid input, delete note, download note, pencarian note, 
+ * rating note, serta report note.
  */
 class NoteTest extends CDbTestCase
 {

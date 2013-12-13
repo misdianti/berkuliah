@@ -1,7 +1,10 @@
 <?php
 
 /**
- * Unit test for Review model.
+ * Kelas ReviewTest melakukan uji coba terhadap fungsi - fungsi pada kelas model 
+ * Review. Kelas ini extends terhadap CDbTestCase. Kelas ReviewTest memeriksa 
+ * fungsi untuk membuat review dan melakukan uji coba terhadap review yang 
+ * dibuat dengan input yang salah.
  */
 class ReviewTest extends CDbTestCase
 {

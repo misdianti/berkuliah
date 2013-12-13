@@ -1,7 +1,15 @@
 <?php
 
 /**
- * Unit test for Testimonial model.
+ * Kelas TestimonialTest melakukan uji coba fungsi - fungsi yang ada 
+ * dalam model testimonial. Kelas ini extends CDbTestCase karena 
+ * melibatkan active records. Kelas TestimonialTest menguji fungsi 
+ * untuk mengecek apakah sistem berhasil untuk “memberi hak” menulis 
+ * testimonial pada user, apakah seluruh status memiliki representasi 
+ * string, mengecek apakah status memiliki representasi string yang 
+ * benar, apakah sistem berhasil menerima testimonial, apakah sistem 
+ * berhasil menyetujui testimonial atau menolaknya, dan mengecek juga
+ * apakah sistem berhasil mengambil testimonial bulan ini. 
  */
 class TestimonialTest extends CDbTestCase
 {

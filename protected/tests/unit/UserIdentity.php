@@ -1,7 +1,11 @@
 <?php
 
 /**
- * Unit test for UserIdentity component.
+ * Kelas UserIdentityTest melakukan uji coba fungsi - fungsi yang ada 
+ * dalam model UserIdentity. Kelas ini extends CDbTestCase karena 
+ * melibatkan active records. Kelas UserIdentityTest menguji fungsi 
+ * untuk mengecek apakah sistem berhasil login, dan apakah sistem 
+ * berhasil menjalankan fungsi humanize() dengan baik.
  */
 class UserIdentityTest extends CDbTestCase
 {

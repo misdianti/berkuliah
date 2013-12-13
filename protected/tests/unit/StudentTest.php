@@ -1,7 +1,11 @@
 <?php
 
 /**
- * Unit test for Student model.
+ * Kelas StudentTest melakukan uji coba fungsi - fungsi yang ada dalam 
+ * model Student. Kelas ini extends CDbTestCase karena melibatkan 
+ * active records. Kelas StudentTest menguji fungsi update student, 
+ * update tanpa photo, update student dengan input yang salah, dan 
+ * fungsi untuk menambahkan badge.
  */
 class StudentTest extends CDbTestCase
 {

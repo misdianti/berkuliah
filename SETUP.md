@@ -38,10 +38,10 @@ Jika yakin kebutuhan standar LAMP telah terpenuhi, lewati perintah ini.
 
 Download dan install program berikut:
 
-1. Coral Server (atau disebut juga Uniform Server) Terbaru: [uniformserver.com](http://sourceforge.net/projects/miniserver/files/Uniform%20Server/8.9.2-Coral/Coral_8_9_2.exe/download).  
+1. Coral Server (atau disebut juga Uniform Server) Terbaru: <http://sourceforge.net/projects/miniserver/files/Uniform%20Server/8.9.2-Coral/Coral_8_9_2.exe/download>.  
    **Catatan:** Anda bisa menggunakkan environment apapun seperti XAMPP, tetapi untuk Windows kami merekomendasikan Uniform.
-1. [MSysGit](http://msysgit.github.io/) dengan [KDiff](http://kdiff3.sourceforge.net/)
-1. SourceTree: [sourcetreeapp.com](http://sourcetreeapp.com)
+1. MSysGit <http://msysgit.github.io/> dengan KDiff <http://kdiff3.sourceforge.net/>
+1. SourceTree: <http://sourcetreeapp.com>
 1. Untuk fitur Preview, mohon pasang SWFTools (dijelaskan belakangan)
 
 Catatan khusus untuk instalasi Coral:
@@ -59,7 +59,7 @@ Catatan khusus untuk instalasi Coral:
 # Konfigurasi Inisial
 
 1. `cd` ke `/var/www/` (Linux) atau `{UNISERVER}\www` (Windows)
-1. Clone: `https://[akun_github_anda]@github.com/misdianti/berkuliah.git` (atau gunakan client kesukaan Anda seperti [SourceTree](http://sourcetreeapp.com))  
+1. Clone: `https://[akun_github_anda]@github.com/misdianti/berkuliah.git` (atau gunakan client kesukaan Anda seperti SourceTree: <http://sourcetreeapp.com>.  
    Selanjutnya, folder ini akan kita sebut sebagai `{BERKULIAH}`
 1. Unduh arsip berikut:
 

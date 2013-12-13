@@ -108,7 +108,14 @@ Catatan khusus untuk instalasi Coral:
 
 # Code Coverage
 
-Code coverage membutuhkan PHP Invoker. Anda dapat dengan mudah memasangnya lewat PEAR jika Anda ada di Linux:
+Code coverage membutuhkan XDebug. Untuk memasang XDebug, ikuti petunjuk berikut di Linux: <http://xdebug.org/docs/install>. Jika menggunakkan Uniform, XDebug sudah tersedia dan cukup diaktifkan saja. Untuk mengaktifkannya, buka berkas `{UNISERVER}\usr\local\php\php-cli.ini` dan hilangkan komentar pada entri `zend_extension` di bagian `[xdebug]`. Sehingga kurang lebih, isinya akan seperti berikut (tentu akan berbeda tergantung konfigurasi komputer Anda):
+
+	[xdebug]
+	zend_extension=D:/dev/uni/usr/local/php/extensions/php_xdebug.dll
+
+Perhatikan bahwa sebelumnya ada titik koma `;` (penanda komentar) di bagian `zend_extension`. Dengan menghilangkan titik koma ini, Anda berarti sudah mengaktifkan XDebug. Jangan lupa untuk restart Apachenya juga.
+
+Selain itu, code coverage membutuhkan PHP Invoker. Anda dapat dengan mudah memasangnya lewat PEAR jika Anda ada di Linux:
 
 	pear install phpunit/PHP_Invoker
 

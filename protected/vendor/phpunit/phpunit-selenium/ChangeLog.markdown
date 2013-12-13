@@ -3,6 +3,12 @@ PHPUnit_Selenium 1.2
 
 This is the list of changes for the PHPUnit_Selenium 1.2 release series.
 
+PHPUnit_Selenium 1.3.3
+----------------------
+
+* Supporting browsers() static method with same behavior as $browsers static property
+* Added $this->log() and $this->logTypes()
+
 PHPUnit_Selenium 1.3.2
 ----------------------
 

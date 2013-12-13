@@ -35,65 +35,35 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  * @package    PHPUnit_Selenium
- * @author     Giorgio Sironi <info@giorgiosironi.com>
+ * @author     Andrew Krasichkov <krasichkovandrew@gmail.com>
  * @copyright  2010-2013 Sebastian Bergmann <sebastian@phpunit.de>
  * @license    http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  * @link       http://www.phpunit.de/
- * @since      File available since Release 1.2.0
+ * @since      File available since Release 1.3.2
  */
 
 /**
- * Object representing an HTTP response from the Selenium Server.
+ * Get the log for a given log type. Log buffer is reset after each request.
  *
  * @package    PHPUnit_Selenium
- * @author     Giorgio Sironi <info@giorgiosironi.com>
+ * @author     Andrew Krasichkov <krasichkovandrew@gmail.com>
  * @copyright  2010-2013 Sebastian Bergmann <sebastian@phpunit.de>
  * @license    http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
  * @version    Release: @package_version@
  * @link       http://www.phpunit.de/
- * @since      Class available since Release 1.2.0
+ * @since      Class available since Release 1.3.2
  */
-class PHPUnit_Extensions_Selenium2TestCase_Response
+class PHPUnit_Extensions_Selenium2TestCase_SessionCommand_Log
+    extends PHPUnit_Extensions_Selenium2TestCase_Command
 {
-    /**
-     * @var array   decoded response
-     */
-    private $jsonResponse;
-
-    /**
-     * @var array   CURL info for the response.
-     */
-    private $info;
-
-    public function __construct($jsonResponse, $info)
+    public function __construct($type, $commandUrl)
     {
-        $this->jsonResponse = $jsonResponse;
-        $this->info = $info;
+        $jsonParameters = array('type' => $type);
+        parent::__construct($jsonParameters, $commandUrl);
     }
 
-    public function getValue()
+    public function httpMethod()
     {
-        if (isset($this->jsonResponse['value'])) {
-            return $this->jsonResponse['value'];
-        }
-    }
-
-    /**
-     * @return PHPUnit_Extensions_Selenium2TestCase_URL
-     */
-    public function getURL()
-    {
-        $url = $this->info['url'];
-        $sessionId = $this->jsonResponse['sessionId'];
-
-        // if url doesn't have sessionId included - append it manually
-        // this change was performed in selenium v2.34
-        // @see https://code.google.com/p/selenium/issues/detail?id=6089
-        // @see https://github.com/sebastianbergmann/phpunit-selenium/issues/265
-        if (strpos($url, $sessionId) === FALSE) {
-            $url .= '/' . $sessionId;
-        }
-
-        return new PHPUnit_Extensions_Selenium2TestCase_URL($url);
+        return 'POST';
     }
 }

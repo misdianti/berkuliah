@@ -16,6 +16,6 @@ return array(
     $vendorDir . '/symfony/yaml',
     $vendorDir . '/phpunit/dbunit',
     $vendorDir . '/symfony/yaml',
-    $vendorDir . '/phpunit/phpunit-selenium',
     $vendorDir . '/phpunit/phpunit-story',
+    $vendorDir . '/phpunit/phpunit-selenium',
 );

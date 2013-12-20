@@ -89,7 +89,5 @@ Yii::app()->clientScript->registerScript('carousel',
           </div>
         </div>
       </div>
-        
-
   </div><!-- span7 -->
 </div><!-- row-fluid -->

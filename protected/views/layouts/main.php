@@ -1,6 +1,5 @@
 <?php
 /* @var $this Controller */
-
 ?>
 
 <!DOCTYPE html>

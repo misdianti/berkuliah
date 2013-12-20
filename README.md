@@ -12,6 +12,7 @@ BerKuliah is a web-based application for lecture notes and problem set archives 
 - Reviews, rates, and reports a file.
 - Gamification via badge system (with nice-looking badges too!).
 - Free space for a testimonial in the front page for user of the month.
+- Share your upload activity to your social media.
 
 ## Bug Tracker
 

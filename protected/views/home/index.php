@@ -4,7 +4,7 @@
 /* @var $usernames array */
 /* @var $dataProvider CActiveDataProvider */
 
-$this->pageTitle = 'Daftar Berkas';
+$this->pageTitle = 'Daftar Berkas-Berkas';
 
 $this->breadcrumbs=array(
 	'Daftar Berkas',
